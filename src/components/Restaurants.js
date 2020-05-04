@@ -18,7 +18,8 @@ class Restaurants extends Component {
     const id = e.target.id 
     const value = e.target.value
     switch(id){
-      case 'changeCity':
+      case 'selectedCity':
+        console.log('fuck', value)
         this.props.changeCity(value)
       break
       case 'postalCode':
