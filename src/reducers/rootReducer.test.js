@@ -4,12 +4,15 @@ import {FaItalic} from 'react-icons/fa'
 
 describe ('Root Reducer', () => {
   let initialState = null
+  
   beforeEach( () => {
     initialState = {
       dataIsLoading: false,
       selectedCity: 'Toronto',
+      refineSearch: '',
+      postalCode: '',
       cities: [],
-      restaurants: []        
+      restaurants: []      
     }    
   })
 
@@ -21,6 +24,7 @@ describe ('Root Reducer', () => {
     const resp = reducer(initialState, { type: actions.DATA_IS_LOADING, payload: true })
     expect(resp.dataIsLoading).toBe(true)
   })
+
   it ('should handle FETCH_RESTAURANTS', () => {
     const data =  [
       { 

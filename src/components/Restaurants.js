@@ -12,14 +12,13 @@ class Restaurants extends Component {
     this.props.fetchCities(`${config.apiEndpoint}/cities`)
     this.props.fetchRestaurants({url: `${config.apiEndpoint}/restaurants?city=${this.props.selectedCity}`})
   }
-
+  
   onChangeHandler = (e) => {
     e.persist()
     const id = e.target.id 
     const value = e.target.value
     switch(id){
       case 'selectedCity':
-        console.log('fuck', value)
         this.props.changeCity(value)
       break
       case 'postalCode':
@@ -48,7 +47,7 @@ class Restaurants extends Component {
       )
     } else { 
       return restaurants.length ? 
-        <DataListing restaurants={restaurants} /> 
+        <DataListing restaurants={restaurants} history={this.props.history} /> 
       : 
         <div className='warning'><FaExclamationTriangle /> No restaurants matched your search criteria</div> 
     }
@@ -60,6 +59,7 @@ class Restaurants extends Component {
     return (
       <main className='site-content'>
         <form>
+          <h1>Search Options</h1>
           <div className="form-group">
             <label htmlFor='selectedCity'>City</label>
             <input 

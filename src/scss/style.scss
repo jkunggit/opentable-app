@@ -23,9 +23,8 @@ body {
     text-align: center;
     .nav-title{
       color: #FFFFFF;
-      h1 { 
-        font-size: 1.8rem; 
-      }
+      font-size: 2rem;
+      padding: 1.2rem;
     }
     flex-shrink: 0;
   }  
@@ -34,6 +33,9 @@ body {
     flex: 1 1 auto;
     max-width: 1000px;
     align-self: center;
+    h1 {
+      font-size: 1.5rem;
+    }
   }
   .site-footer {
     background: #4c1d1d;
@@ -135,9 +137,12 @@ button {
 }
 
 @media all and (min-width: 768px) {
-  .site-content {
-    min-width: 650px;
-  }  
+  .app {
+    .site-content {
+      padding: 0px;
+      min-width: 650px;
+    }  
+  }
   .form-group {
     flex-direction: row;
     label {

@@ -26,9 +26,6 @@ module.exports = {
       }
     ]
   },
-  devServer: {
-    historyApiFallback: true // handle 404 responses when user refresh the page
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'

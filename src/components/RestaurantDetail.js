@@ -1,6 +1,7 @@
 import React, { Component} from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
+import queryString from 'query-string'
 
 import config from '../config'
 
@@ -15,7 +16,7 @@ class RestaurantDetail extends Component {
   }
 
   async componentDidMount () {
-    let name = this.props.match.params.name;
+    let name = queryString.parse(this.props.location.search).name
     // get the info
     try {
       const response = await axios.get(`${config.apiEndpoint}/restaurants?city=${this.props.selectedCity}&name=${name}`)
@@ -32,10 +33,9 @@ class RestaurantDetail extends Component {
 
   displayRestaurantDetails = () => {
     const data = this.state.data
-    console.log(data)
     return (
       <div className='restaurant-container'>
-        <h2>Restaurant: {data.name}</h2>
+        <h1>Restaurant: {data.name}</h1>
         <div className='detail-group'>
           <div className='label'>Address</div>
           <div className='info'>{data.address}</div>

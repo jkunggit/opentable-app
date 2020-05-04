@@ -1,10 +1,8 @@
 import React from 'react'
-import { Link, withRouter } from 'react-router-dom'
-
 
 const DataListing = ({ restaurants, history }) => {
   const loadDetail = (name) => {
-    history.push(`/detail${name}`)
+    history.push(`/detail?name=${name}`)
   }
 
   return (
@@ -32,4 +30,4 @@ const DataListing = ({ restaurants, history }) => {
   )
 }
 
-export default withRouter(DataListing) // so we have access to the history
+export default DataListing
