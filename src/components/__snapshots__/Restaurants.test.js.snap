@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Restaurants should find all restaurants matching postal code search: The Quick Pita.. 1`] = `"<thead><tr><th>Name</th><th>Address</th><th>Area</th></tr></thead><tbody><tr><td>The Quick Pita</td><td>1345 Hummingbird Crt</td><td>Toronto / SW Ontario</td></tr></tbody>"`;
+
+exports[`Restaurants should find all restaurants matching refine search: The Sultan's Tent ... 1`] = `"<thead><tr><th>Name</th><th>Address</th><th>Area</th></tr></thead><tbody><tr><td>The Sultan's Tent</td><td>49 Front St E</td><td>Toronto / SW Ontario</td></tr></tbody>"`;
+
+exports[`Restaurants should render with redux 1`] = `"<thead><tr><th>Name</th><th>Address</th><th>Area</th></tr></thead><tbody><tr><td>Scaramouche Restaurant</td><td>1 Benvenuto Place</td><td>Toronto / SW Ontario</td></tr><tr><td>The Sultan's Tent</td><td>49 Front St E</td><td>Toronto / SW Ontario</td></tr><tr><td>The Quick</td><td>1345 Hummingbird Crt</td><td>Toronto / SW Ontario</td></tr></tbody>"`;

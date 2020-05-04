@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions should create an action to fetch cities 1`] = `
+Array [
+  "Chicago",
+  "San Francisco",
+  "New York",
+]
+`;
+
+exports[`actions should create an action to fetch restaurant listing 1`] = `
+Array [
+  Object {
+    "address": "1 Benvenuto Place",
+    "area": "Toronto / SW Ontario",
+    "name": "Scaramouche Restaurant",
+  },
+  Object {
+    "address": "49 Front St E",
+    "area": "Toronto / SW Ontario",
+    "name": "The Sultan's Tent",
+  },
+]
+`;
+
+exports[`actions should filter by postal_code 1`] = `
+Array [
+  Object {
+    "address": "49 Front St E",
+    "area": "Toronto / SW Ontario",
+    "name": "The Sultan's Tent",
+  },
+]
+`;
+
+exports[`actions should filter by refine search 1`] = `
+Array [
+  Object {
+    "address": "1 Benvenuto Place",
+    "area": "Toronto / SW Ontario",
+    "name": "Scaramouche Restaurant",
+  },
+]
+`;

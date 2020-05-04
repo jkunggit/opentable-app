@@ -1,0 +1,52 @@
+{
+  "name": "opentable-app",
+  "version": "1.0.0",
+  "description": "",
+  "comments": {
+    "--open": "to automatically open when we run the start command",
+    "--hot": "to auto reload when we save something"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --hot --port 3000",
+    "dev": "webpack --mode development --progress",
+    "build": "webpack --mode production --progress",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
+  },
+  "author": "Jim Kung",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.6.5",
+    "node-sass": "^4.14.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "regenerator-runtime": "^0.13.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@testing-library/react": "^10.0.4",
+    "babel-jest": "^25.5.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.3.0",
+    "jest": "^25.5.4",
+    "react-test-renderer": "^16.13.1",
+    "redux-mock-store": "^1.5.4",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
