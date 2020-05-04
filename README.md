@@ -19,14 +19,14 @@ The most must useful feature that was added to the Javascript language would be 
   }
 ```
 
-##3
+## 3
 Performance issues can be monitored with various tools like Google's PageSpeed Insights. I do not often have to monitor issues on the production server unless it's a major bug issue.
 
-##4
+## 4
 The API should allow more options to filter the data. It was not possible to use the API to partially query the records by either name, address, and area.
 I had to filter it on the client side. It would be alot better if it was implement with graphql because the data can be explicitly requested.
 
-##5
+## 5
 ```
 {
   "firstName": "Jim",
