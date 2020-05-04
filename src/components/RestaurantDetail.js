@@ -1,8 +1,6 @@
 import React, { Component} from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
-import queryString from 'query-string'
-
 import config from '../config'
 
 class RestaurantDetail extends Component {
@@ -16,7 +14,7 @@ class RestaurantDetail extends Component {
   }
 
   async componentDidMount () {
-    let name = queryString.parse(this.props.location.search).name
+    const name =  (new URLSearchParams(this.props.location.search)).get('name')
     // get the info
     try {
       const response = await axios.get(`${config.apiEndpoint}/restaurants?city=${this.props.selectedCity}&name=${name}`)
