@@ -103,7 +103,7 @@ class Restaurants extends Component {
             />          
           </div>         
           <div className='form-group'>
-            <button id='applyBtn' onClick={this.applySearch}>Apply</button>  
+            <button id='applyBtn' onClick={this.applySearch} title='Apply'>Apply</button>  
           </div>     
         </form>
         {this.showListing()}

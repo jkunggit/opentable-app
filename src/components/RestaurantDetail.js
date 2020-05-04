@@ -57,7 +57,7 @@ class RestaurantDetail extends Component {
           </div>
         </div>
         <div className='button-container'>
-          <button className='go-back-btn' onClick={this.goBack}>Go back</button>
+          <button className='go-back-btn' onClick={this.goBack} title='Go Back to home page'>Go back</button>
         </div>         
       </div>
     )
