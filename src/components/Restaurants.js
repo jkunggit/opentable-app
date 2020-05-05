@@ -43,13 +43,13 @@ class Restaurants extends Component {
     const { restaurants, dataIsLoading } = this.props
     if(dataIsLoading) {
       return (
-        <div className='loader'>Loading ...</div>
+        <div className='loader' aria-busy='true'>Loading ...</div>
       )
     } else { 
       return restaurants.length ? 
         <DataListing restaurants={restaurants} history={this.props.history} /> 
       : 
-        <div className='warning'><FaExclamationTriangle /> No restaurants matched your search criteria</div> 
+        <div className='warning' aria-live='polite'><FaExclamationTriangle /> No restaurants matched your search criteria</div> 
     }
   }
 

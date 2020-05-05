@@ -1,14 +1,14 @@
 import React from 'react';
 import { FaUtensils } from 'react-icons/fa';
 
-const Navbar = () => {
+const Header = () => {
   return (
-    <nav className='nav-header'>
-      <div className='nav-title'>
+    <header className='header-container'>
+      <div className='header-title'>
         <FaUtensils />Restaurant Listing
       </div>
-    </nav>
+    </header>
   )
 }
 
-export default Navbar
+export default Header
