@@ -1,7 +1,8 @@
 import React from 'react'
 
 const DataListing = ({ restaurants, history }) => {
-  const loadDetail = (name) => {
+  const loadDetail = (e, name) => {
+    e.target.parentNode.setAttribute('aria-pressed', true)
     history.push(`/detail?name=${name}`)
   }
 
@@ -18,7 +19,13 @@ const DataListing = ({ restaurants, history }) => {
         {restaurants.map((resturant, index) => {
           const { name, address, area } = resturant
           return (
-            <tr key={index} onClick={() => { loadDetail(name) }}>
+            <tr key={index} 
+              onClick={(e) => { loadDetail(e, name) }} 
+              onKeyPress={(e) => { loadDetail(e, name) }} 
+              tabIndex='0'
+              role='button'
+              aria-pressed='false'
+            >
               <td>{name}</td>
               <td>{address}</td>
               <td>{area}</td>
